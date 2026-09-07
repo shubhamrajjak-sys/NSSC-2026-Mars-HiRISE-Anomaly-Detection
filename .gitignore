@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# TensorFlow / ML
+*.h5
+*.keras
+*.ckpt
+checkpoints/
+
+# Dataset — DO NOT upload competition images
+data/images/
+images/
+*.jpg
+*.jpeg
+*.png
+
+# Results generated locally
+results/tmp/
+logs/
+
+# OS
+.DS_Store
+
+# Google Colab
+*.pyc
