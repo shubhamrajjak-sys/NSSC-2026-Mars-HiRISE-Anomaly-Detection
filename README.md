@@ -6,7 +6,7 @@
 This project addresses the NSSC 2026 Data Analytics problem:
 
 **"Unsupervised Anomaly Detection in Mars HiRISE Orbital Imagery."**
-
+ 
 The objective is to learn the dominant visual distribution of Martian surface imagery without using ground-truth anomaly labels or pretrained feature extractors, and then identify images that significantly deviate from the learned representation.
 
 The solution combines:
