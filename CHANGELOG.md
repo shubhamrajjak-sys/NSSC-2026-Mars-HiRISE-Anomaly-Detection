@@ -50,31 +50,23 @@ Compare V2 against V1 using reconstruction metrics and visual inspection.
 
 ---
 
-## V3 — Anomaly Detection and Interpretability Improvement
+## V3 — Anomaly Interpretability
 
 ### Symptom
-A good reconstruction model alone does not directly provide an anomaly
-decision or explain why an image is considered unusual.
+Latent-space novelty scores identify unusual images but do not show
+where the reconstruction differs from the input.
 
 ### Diagnosis
-Anomaly detection requires analysis of the learned latent representation,
-followed by a statistically justified threshold and reconstruction-error
-visualization.
+Isolation Forest operates on the latent representation and therefore
+does not provide spatial localization of anomaly evidence.
 
 ### Fix
-The pipeline will:
-
-1. Extract latent vectors from the trained autoencoder.
-2. Apply Isolation Forest to the latent vectors.
-3. Convert anomaly scores so higher values represent greater novelty.
-4. Determine a statistical anomaly threshold.
-5. Select the top-5 highest-novelty samples.
-6. Generate reconstruction-error heatmaps.
-7. Compare anomalous regions with available metadata.
+Added reconstruction-error heatmaps for the statistically flagged
+top-ranked images using the V2 autoencoder.
 
 ### Outcome
-The final pipeline combines latent-space novelty detection with
-reconstruction-based visual interpretation.
+Generated original-image, reconstruction, and reconstruction-error
+visualizations to support spatial interpretation of candidate anomalies.
 
 ---
 
